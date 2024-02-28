@@ -1,0 +1,13 @@
+{% extends "layout.html" %} {% load static %}
+<!-- Use this to add HTML to layout.html's <head> -->
+{% block loadInHead %}
+<!-- LINK CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'landingPage.css' %}" />
+{% endblock %}
+
+<!-- Adds content to the <body> -->
+{% block content %}
+<main class="main-container">
+  <h5>Landing Page</h5>
+</main>
+{% endblock %}
