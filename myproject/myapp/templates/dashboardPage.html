@@ -1,17 +1,16 @@
 {% extends "layout.html" %} {% load static %}
 <!-- Use this to add HTML to layout.html's <head> -->
+
 {% block loadInHead %}
-<!-- LINK CSS -->
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'dashboardPage.css' %}"
-/>
+  <!-- LINK CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/dashboardPage.css' %}"/>
+
 {% endblock %}
 
 <!-- Adds content to the <body> -->
-{% block content %}
-<main class="main-container">
-  <h5>Dashboard Page</h5>
-</main>
-{% endblock %}
+  
+    {% block content %}
+    {% endblock %}
+
+
+
