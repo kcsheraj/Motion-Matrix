@@ -14,9 +14,9 @@ def dashboardPage(request):
     # Add your view logic here
     return render(request, 'dashboardPage.html')
     
-def calendarPage(request):
+def calenderPage(request):
     # Add your view logic here
-    return render(request, 'calendarPage.html')
+    return render(request, 'calenderPage.html')
     
 def workoutRoutinePage(request):
     # Add your view logic here
