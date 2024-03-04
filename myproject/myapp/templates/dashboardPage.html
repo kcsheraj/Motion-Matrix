@@ -1,39 +1,52 @@
-{% extends "layout2.html" %} {% load static %}
-
-{% block loadInHead %}
-  <!-- LINK CSS specific to dashboard page -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/dashboardPage.css' %}"/>
-{% endblock %}
-
-{% block layout2_content %}
+{% extends "layout2.html" %} {% load static %} {% block loadInHead %}
+<!-- LINK CSS specific to dashboard page -->
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/dashboardPage.css' %}"
+/>
+{% endblock %} {% block layout2_content %}
 <!-- Unique Dashboard Content Goes Here -->
-<div class="container2 mt-5 pt-5"> <!-- Adjusted margin and padding for content below the navbar -->
-    <div class="card text-bg-dark">
-        <img src="{% static 'assets/calender.jpg' %}" class="calender-img" alt="Calender">
-        <div class="card-img-overlay">
-            <a href="#" class="card-title text-center">Calender</a>              
-        </div>
+<div class="container2 mt-5 pt-5">
+  <!-- Adjusted margin and padding for content below the navbar -->
+  <div class="card text-bg-dark">
+    <img
+      src="{% static 'assets/calender.jpg' %}"
+      class="calender-img"
+      alt="Calender"
+    />
+    <div class="card-img-overlay">
+      <a href="#" class="card-title text-center">Calender</a>
     </div>
+  </div>
 
-    <div class="card text-bg-dark">
-        <img src="{% static 'assets/workoutroutine.webp' %}" class="workoutroutine-img" alt="Workout Routine">
-        <div class="card-img-overlay">
-            <a href="#" class="card-title text-center">Workout Routine</a>              
-        </div>
+  <div class="card text-bg-dark">
+    <img
+      src="{% static 'assets/workoutroutine.webp' %}"
+      class="workoutroutine-img"
+      alt="Workout Routine"
+    />
+    <div class="card-img-overlay">
+      <a href="#" class="card-title text-center">Workout Routine</a>
     </div>
+  </div>
 
-    <div class="card text-bg-dark">
-        <img src="{% static 'assets/PR.webp' %}" class="pr-img" alt="PR">
-        <div class="card-img-overlay">
-            <a href="#" class="card-title text-center">Personal Record</a>              
-        </div>
+  <div class="card text-bg-dark">
+    <img src="{% static 'assets/PR.webp' %}" class="pr-img" alt="PR" />
+    <div class="card-img-overlay">
+      <a href="#" class="card-title text-center">Personal Record</a>
     </div>
+  </div>
 
-    <div class="card text-bg-dark">
-        <img src="{% static 'assets/exploreworkouts.jpg' %}" class="exploreworkouts-img" alt="Explore Workouts">
-        <div class="card-img-overlay">
-            <a href="#" class="card-title text-center">Explore Workouts</a>              
-        </div>
+  <div class="card text-bg-dark">
+    <img
+      src="{% static 'assets/exploreworkouts.jpg' %}"
+      class="exploreworkouts-img"
+      alt="Explore Workouts"
+    />
+    <div class="card-img-overlay">
+      <a href="#" class="card-title text-center">Explore Workouts</a>
     </div>
+  </div>
 </div>
 {% endblock %}
