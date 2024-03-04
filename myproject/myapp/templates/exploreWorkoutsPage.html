@@ -1,17 +1,17 @@
-{% extends "layout.html" %} {% load static %}
+{% extends "layout2.html" %} {% load static %}
 <!-- Use this to add HTML to layout.html's <head> -->
 {% block loadInHead %}
 <!-- LINK CSS -->
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'exploreWorkoutsPage.css' %}"
-/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/exploreWorkoutsPage.css' %}"/>
+<script src="{% static 'js/exploreWorkoutsScript.js' %}"></script>
 {% endblock %}
 
 <!-- Adds content to the <body> -->
-{% block content %}
-<main class="main-container">
-  <h5>Explore Workouts Page</h5>
-</main>
+{% block layout2_content %}
+<div class="move-image-container">
+  <div id="image-container"></div>
+</div>
+<div class="move-muscle-group-display-container">
+  <div id="muscle-group-display-container"></div>
+</div>
 {% endblock %}
