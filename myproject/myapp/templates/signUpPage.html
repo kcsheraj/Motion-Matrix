@@ -26,27 +26,54 @@
       <i class="fas fa-arrow-left"></i>
     </button>
   </a>
-  <h1>Welcome back.</h1>
+  <h2>Let's get you set up.</h2>
+  <div class="form-floating w-85 mb-2">
+    <input
+      type="first_name"
+      class="form-control"
+      id="firstName"
+      placeholder="John"
+    />
+    <label for="floatingInput">First name</label>
+  </div>
+  <div class="form-floating w-85 mb-2">
+    <input
+      type="last_name"
+      class="form-control"
+      id="lastName"
+      placeholder="Doe"
+    />
+    <label for="floatingInput">Last name</label>
+  </div>
   <div class="form-floating w-85 mb-2">
     <input
       type="email"
       class="form-control"
-      id="floatingInput"
+      id="emailAddress"
       placeholder="name@example.com"
     />
     <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating w-85 mb-2">
+    <input
+      type="password"
+      class="form-control"
+      id="Password"
+      placeholder="Password"
+    />
+    <label for="floatingPassword">Password</label>
   </div>
   <div class="form-floating w-85 mb-3">
     <input
       type="password"
       class="form-control"
-      id="floatingPassword"
-      placeholder="Password"
+      id="floatingPasswordConfirm"
+      placeholder="name@example.com"
     />
-    <label for="floatingPassword">Password</label>
+    <label for="floatingInput">Confirm password</label>
   </div>
-  <button type="submit" class="btn btn-primary w-85 py-2 mb-2">Login</button>
-  <p>First time? <a href="{% url 'signUpPage' %}">Sign Up</a></p>
+  <button type="submit" class="btn btn-primary w-85 py-2 mb-2">Sign Up</button>
+  <p>Already have an account? <a href="{% url 'loginPage' %}">Login</a></p>
   <div id="or">OR</div>
   <a
     href="https://developers.google.com/identity/sign-in/web/sign-in"

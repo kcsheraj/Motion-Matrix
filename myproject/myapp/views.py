@@ -10,6 +10,10 @@ def loginPage(request):
     # Add your view logic here
     return render(request, 'loginPage.html')
 
+def signUpPage(request):
+    # Add your view logic here
+    return render(request, 'signUpPage.html')
+
 def dashboardPage(request):
     # Add your view logic here
     return render(request, 'dashboardPage.html')

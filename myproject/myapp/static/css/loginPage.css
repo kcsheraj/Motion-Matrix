@@ -1,3 +1,86 @@
-.main-container {
-  background-color: blue;
+#vanta-background {
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the container is behind other content */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+#panel {
+  width: 400px; /* Adjust the width as needed */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  /*
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 35px;
+  padding: 15px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  padding: 15px;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+/* see README.md for --OR-- divider credit */
+#or {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#or::before,
+#or::after {
+  position: absolute;
+  display: flex;
+  width: 130px;
+  height: 1px;
+  top: 24px;
+  background-color: #aaa;
+  content: "";
+}
+
+#or::before {
+  left: 0;
+}
+
+#or::after {
+  right: 0;
+}
+
+.custom-btn {
+  width: 300px;
 }
