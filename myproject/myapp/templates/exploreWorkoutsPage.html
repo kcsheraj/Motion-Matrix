@@ -2,8 +2,12 @@
 <!-- Use this to add HTML to layout.html's <head> -->
 {% block loadInHead %}
 <!-- LINK CSS -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/exploreWorkoutsPage.css' %}"/>
-<script src="{% static 'js/exploreWorkoutsScript.js' %}"></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/exploreWorkoutsPage.css' %}"
+/>
+<script src="{% static 'js/exploreWorkoutsScript.js' %}" defer></script>
 {% endblock %}
 
 <!-- Adds content to the <body> -->

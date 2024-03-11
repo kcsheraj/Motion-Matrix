@@ -5,13 +5,118 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'workoutRoutinePage.css' %}"
+  href="{% static 'css/workoutRoutinePage.css' %}"
 />
+<!-- LINK JS -->
+<script src="{% static 'js/workoutRoutinePage.js' %}" defer></script>
 {% endblock %}
 
 <!-- Adds content to the <body> -->
 {% block layout2_content %}
-<main class="main-container">
-  <h5>Workout Routine Page</h5>
-</main>
+
+<div class="main-container">
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="workout">
+        <h5>Name of the workout</h5>
+        <input
+          type="text"
+          id="workout"
+          name="workout"
+          placeholder="ex: Squat, Bench Press"
+        />
+      </div>
+      <div class="set">
+        <h5>Number of sets</h5>
+        <input
+          type="text"
+          class="number-input"
+          id="numInput1"
+          onkeypress="return onlyNumberKey(event)"
+          placeholder="enter a number, ex: 3"
+        />
+        <script>
+          function onlyNumberKey(evt) {
+            var ASCIICode = evt.which ? evt.which : evt.keyCode;
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+              return false;
+            return true;
+          }
+        </script>
+      </div>
+
+      <div class="reps">
+        <h5>Number of reps</h5>
+        <input
+          type="text"
+          class="number-input"
+          id="numInput2"
+          onkeypress="return onlyNumberKey(event)"
+          placeholder="enter a number, ex: 8"
+        />
+      </div>
+
+      <div class="addbtn">
+        <button type="submit" class="addWorkout">Add</button>
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="weekdays">
+      <div id="monday" class="day">
+        <p>Monday</p>
+        <button type="submit" class="addWorkout" id="mondayBtn">
+          Add Workout
+        </button>
+      </div>
+      <div id="tuesday" class="day">
+        <p>Tuesday</p>
+        <button type="submit" class="addWorkout" id="tuesdayBtn">
+          Add Workout
+        </button>
+      </div>
+      <div id="wednesday" class="day">
+        <p>Wednesday</p>
+        <button type="submit" class="addWorkout" id="wednesdayBtn">
+          Add Workout
+        </button>
+      </div>
+      <div id="thursday" class="day">
+        <p>Thursday</p>
+        <button type="submit" class="addWorkout" id="thursdayBtn">
+          Add Workout
+        </button>
+      </div>
+      <div id="friday" class="day">
+        <p>Friday</p>
+        <button type="submit" class="addWorkout" id="fridayBtn">
+          Add Workout
+        </button>
+      </div>
+      <div id="saturday" class="day">
+        <p>Saturday</p>
+        <button type="submit" class="addWorkout" id="saturdayBtn">
+          Add Workout
+        </button>
+      </div>
+      <div id="sunday" class="day">
+        <p>Sunday</p>
+        <button type="submit" class="addWorkout" id="sundayBtn">
+          Add Workout
+        </button>
+      </div>
+    </div>
+    <div class="workout-content">
+      <div id="mondayCol" class="col"></div>
+      <div id="tuesdayCol" class="col"></div>
+      <div id="wednesdayCol" class="col"></div>
+      <div id="thursdayCol" class="col"></div>
+      <div id="fridayCol" class="col"></div>
+      <div id="saturdayCol" class="col"></div>
+      <div id="sundayCol" class="col"></div>
+    </div>
+  </div>
+</div>
 {% endblock %}
