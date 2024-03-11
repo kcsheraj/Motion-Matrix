@@ -32,14 +32,18 @@
       alt="Workout Routine"
     />
     <div class="card-img-overlay">
-      <a href="#" class="card-title text-center">Workout Routine</a>
+      <a href="{% url 'workoutRoutinePage' %}" class="card-title text-center"
+        >Workout Routine</a
+      >
     </div>
   </div>
 
   <div class="card text-bg-dark">
     <img src="{% static 'assets/PR.webp' %}" class="pr-img" alt="PR" />
     <div class="card-img-overlay">
-      <a href="#" class="card-title text-center">Personal Record</a>
+      <a href="{% url 'prsPage' %}" class="card-title text-center"
+        >Personal Record</a
+      >
     </div>
   </div>
 
@@ -50,7 +54,9 @@
       alt="Explore Workouts"
     />
     <div class="card-img-overlay">
-      <a href="#" class="card-title text-center">Explore Workouts</a>
+      <a href="{% url 'exploreWorkoutsPage' %}" class="card-title text-center"
+        >Explore Workouts</a
+      >
     </div>
   </div>
 </div>
