@@ -1,26 +1,44 @@
+
 #image-container img {
-  display: flex;
-  width: 550px;
+  display: block; 
+  max-width: 50%; 
   height: auto; 
+  margin: 0 auto; 
 }
 
-.move-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-}
 
+.move-image-container,
 .move-muscle-group-display-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center; 
+}
+
+.move-image-container {
+  margin-top: 70px;
+}
+
+.move-muscle-group-display-container {
   margin-top: 5px;
-  text-align: center;
 }
 
 #muscle-group-display-container ul {
-  list-style-type: none; 
-  padding-left: 0;
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  text-align: center; 
   text-transform: lowercase;
+}
+
+
+@media (max-width: 50px) {
+  .move-image-container,
+  .move-muscle-group-display-container {
+    margin-top: 20px; 
+  }
+
+  #muscle-group-display-container ul {
+    font-size: smaller; 
+  }
 }
