@@ -1,3 +1,83 @@
+/* Center the columns horizontally */
 .main-container {
-  background-color: brown;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the columns */
+.column {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  width: calc(
+    33.33% - 40px
+  ); /* Adjusted width for three columns with margins */
+}
+
+/* Style the unordered lists */
+.column ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+/* Style the list items */
+.column ul li {
+  padding: 5px 0; /* Add some vertical spacing between list items */
+}
+
+/* Style the bullet point */
+.column ul li:before {
+  content: "\2022"; /* Unicode character for bullet point */
+  color: #4caf50; /* Green color */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; /* Align bullet point with text */
+}
+
+/* Style the input fields */
+input[type="text"] {
+  width: calc(
+    100% - 10px
+  ); /* Take up the available space minus 10px for padding */
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style the submit buttons */
+button[type="submit"] {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style the warning messages */
+.warning {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Ensure responsiveness on smaller screens */
+@media (max-width: 767px) {
+  .main-container {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    align-items: center; /* Center align items */
+  }
+  .column {
+    width: calc(100% - 40px); /* Full width on small screens with margins */
+    margin: 10px 20px; /* Adjusted margin for smaller screens */
+  }
 }

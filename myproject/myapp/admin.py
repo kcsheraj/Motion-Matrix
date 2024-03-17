@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import PRModel
 
-# Register your models here.
+# Register PRModel model here.
+admin.site.register(PRModel)
