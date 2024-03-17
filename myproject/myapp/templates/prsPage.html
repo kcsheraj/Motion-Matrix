@@ -2,13 +2,118 @@
 <!-- Use this to add HTML to layout.html's <head> -->
 {% block loadInHead %}
 <!-- LINK CSS -->
-<link rel="stylesheet" type="text/css" href="{% static 'prsPage.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/prsPage.css' %}" />
 {% endblock %}
 
 <!-- Adds content to the <body> -->
 {% block layout2_content %}
 
 <main class="main-container">
-  <h5>PRs Page</h5>
+  <div class="column">
+    <h6>Bench</h6>
+    <form id="bench_pr_form" method="post" action="{% url 'add_bench_pr' %}">
+      {% csrf_token %}
+      <input
+        type="text"
+        name="bench_pr_text"
+        id="bench_pr_text"
+        placeholder="Enter Bench PR"
+      />
+      <button type="submit" id="submit_btn">Add Bench PR</button>
+      <!-- Display a warning message -->
+      <p id="warning" class="warning" style="display: none">
+        Please enter only numbers.
+      </p>
+    </form>
+
+    <script>
+      document.getElementById("bench_pr_form").onsubmit = function () {
+        var input = document.getElementById("bench_pr_text").value;
+        if (!input.match(/^\d+$/)) {
+          // If input is not a number, display warning message and prevent form submission
+          document.getElementById("warning").style.display = "block";
+          return false; // Prevent form submission
+        }
+      };
+    </script>
+    <ul>
+      {% for pr in bench_prs %} {% if pr %}
+      <li>{{ pr }}</li>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+
+  <div class="column">
+    <h6>Squat</h6>
+    <form id="squat_pr_form" method="post" action="{% url 'add_squat_pr' %}">
+      {% csrf_token %}
+      <input
+        type="text"
+        name="squat_pr_text"
+        id="squat_pr_text"
+        placeholder="Enter Squat PR"
+      />
+      <button type="submit" id="submit_btn_squat">Add Squat PR</button>
+      <!-- Display a warning message -->
+      <p id="warning_squat" class="warning" style="display: none">
+        Please enter only numbers.
+      </p>
+    </form>
+
+    <script>
+      document.getElementById("squat_pr_form").onsubmit = function () {
+        var input = document.getElementById("squat_pr_text").value;
+        if (!input.match(/^\d+$/)) {
+          // If input is not a number, display warning message and prevent form submission
+          document.getElementById("warning_squat").style.display = "block";
+          return false; // Prevent form submission
+        }
+      };
+    </script>
+    <ul>
+      {% for pr in squat_prs %} {% if pr %}
+      <li>{{ pr }}</li>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+
+  <div class="column">
+    <h6>Deadlift</h6>
+    <form
+      id="deadlift_pr_form"
+      method="post"
+      action="{% url 'add_deadlift_pr' %}"
+    >
+      {% csrf_token %}
+      <input
+        type="text"
+        name="deadlift_pr_text"
+        id="deadlift_pr_text"
+        placeholder="Enter Deadlift PR"
+      />
+      <button type="submit" id="submit_btn_deadlift">Add Deadlift PR</button>
+      <!-- Display a warning message -->
+      <p id="warning_deadlift" class="warning" style="display: none">
+        Please enter only numbers.
+      </p>
+    </form>
+
+    <script>
+      document.getElementById("deadlift_pr_form").onsubmit = function () {
+        var input = document.getElementById("deadlift_pr_text").value;
+        if (!input.match(/^\d+$/)) {
+          // If input is not a number, display warning message and prevent form submission
+          document.getElementById("warning_deadlift").style.display = "block";
+          return false; // Prevent form submission
+        }
+      };
+    </script>
+    <ul>
+      {% for pr in deadlift_prs %} {% if pr %}
+      <li>{{ pr }}</li>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
 </main>
+
 {% endblock %}
