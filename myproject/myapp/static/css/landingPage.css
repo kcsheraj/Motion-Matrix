@@ -1,0 +1,5 @@
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 10px; /* Font size for smaller screens */
+    }
+}
