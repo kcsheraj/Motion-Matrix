@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import SignUpForm
 from django.contrib import messages
 from django.utils import timezone
-from datetime import datetime
+from datetime import datetime, date
 import re
 # Create your views here.
 
@@ -128,3 +128,8 @@ def add_text(request):
 def exploreWorkoutsPage(request):
     # Add your view logic here
     return render(request, 'exploreWorkoutsPage.html')
+
+def date_today(request):
+    #fetches current date for the navbar
+    current_date = date.today()
+    return render(request, 'layout2.html', {'current_date': current_date})
