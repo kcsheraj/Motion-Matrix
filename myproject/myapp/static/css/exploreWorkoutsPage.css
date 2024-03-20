@@ -1,26 +1,128 @@
+/* Base styles for mobile: Ensure img fits well */
 #image-container img {
-  display: flex;
-  width: 550px;
-  height: auto; 
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* Center the image */
 }
 
-.move-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
+/* Ensuring .muscle-group-display-container is centered on mobile */
+@media (max-width: 768px) {
+  .muscle-group-display-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensure content inside is aligned to the center */
+    width: 100%; /* Use 100% width for mobile to ensure container expands as expected */
+    max-width: 600px; /* Adjust this value based on your design needs */
+    margin: 0 auto; /* This should center the container */
+    text-align: center; /* Center the text inside the container */
+  }
+
+  #image-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
-.move-muscle-group-display-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5px;
-  text-align: center;
+/* Desktop styles: Adjust to 60% width for larger screens, center the box */
+@media (min-width: 768px) {
+  #image-container img {
+    max-width: 60%;
+    min-width: 60%;
+  }
+
+  .containers-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .move-image-container,
+  .muscle-group-display-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin: 0 20px; /* Spacing between containers */
+  }
+
+  .box {
+    margin: 30px auto; /* Center the box */
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    color: rgb(220, 218, 218);
+    height: 270px;
+  }
 }
 
-#muscle-group-display-container ul {
-  list-style-type: none; 
+/* Additional styling for .box, .no-bullets, and color-specific classes */
+.box {
+  min-width: 0;
+  min-height: 0;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+  color: rgb(220, 218, 218);
+  margin-top: 30px;
+  height: 270px;
+  margin: auto;
+}
+
+.box h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.box p {
+  color: #666;
+}
+
+.no-bullets {
+  list-style-type: none;
   padding-left: 0;
-  text-transform: lowercase;
+}
+
+#primaryMusclesContainer {
+  background-color: rgb(247, 99, 99);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: auto;
+  margin: 0 20px;
+
+}
+
+#secondaryMusclesContainer {
+  background-color: rgb(130, 130, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: auto;
+  margin: 0 20px;
+}
+
+@media (max-width: 50px) {
+  .move-image-container,
+  .muscle-group-display-container {
+    margin-top: 5px;
+  }
+
+  #muscle-group-display-container ul {
+    font-size: smaller;
+  }
 }
