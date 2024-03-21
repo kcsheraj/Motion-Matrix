@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import PRModel  # Import your model
 from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from .forms import SignUpForm
+from django.contrib import messages
 from django.utils import timezone
 from datetime import datetime
 import re
@@ -12,11 +16,41 @@ def landingPage(request):
 
 def loginPage(request):
     # Add your view logic here
+    if request.method == 'POST':
+        username = request.POST.get('username').lower()
+        password = request.POST.get('password')
+
+        try:
+            user = User.objects.get(username=username)
+        except:
+            messages.error(request, 'UserName or password doesnt match')
+            return render(request, 'loginPage.html')
+
+        user = authenticate(request, username=username, password = password)
+
+        if user is not None:
+            login(request,user)
+            return redirect('dashboardPage')
+        else:
+            messages.error(request, 'UserName or password doesnt match')
+        
+        
     return render(request, 'loginPage.html')
 
 def signUpPage(request):
     # Add your view logic here
-    return render(request, 'signUpPage.html')
+    form = SignUpForm()
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            return redirect('loginPage')
+        else:
+            messages.error(request, 'An error occurred during registration')
+   
+    return render(request, 'signUpPage.html', {'form': form})
 
 def dashboardPage(request):
     # Add your view logic here

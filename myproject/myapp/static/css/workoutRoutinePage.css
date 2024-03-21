@@ -1,9 +1,11 @@
 /* STYLE.CSS */
+
 .main-container {
   width: 100%;
   height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
+  
 }
 
 .logo,
@@ -51,8 +53,9 @@
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
-  height: 30%;
+  width: 400px; /* Could be more or less, depending on screen size */
+  height: 250px;
+ 
 }
 
 /* The Close Button */
@@ -103,7 +106,7 @@ input[type="text"] {
 }
 
 .workoutAdding {
-  background-color: azure;
+  background-color: #D4CDAB;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -120,12 +123,17 @@ input[type="text"] {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  overflow: visible;
+  white-space: nowrap;
+ 
 }
 
 /* SCHEDULE.CSS */
 .main-content {
-  width: calc(100% - 250px);
-  height: calc(100vh - 80px);
+  width: calc(100% );
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
 }
 
 .weekdays {
@@ -135,6 +143,9 @@ input[type="text"] {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eaeaea;
+  background-color: #8E9B90;
+  flex-wrap: wrap;
+  
 }
 .day {
   width: calc(100% / 7);
@@ -150,8 +161,8 @@ input[type="text"] {
   height: calc(100vh - 210px);
   display: flex;
   justify-content: space-evenly;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .col {
@@ -159,8 +170,10 @@ input[type="text"] {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-right: 1px solid #eaeaea;
-  border-left: 1px solid #eaeaea;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-top:2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .day .addWorkout {
@@ -186,4 +199,53 @@ input[type="text"] {
 .day .addWorkout:hover {
   background-color: #04aa6d;
   color: white;
+}
+
+#mondayCol, #wednesdayCol , #fridayCol, #sundayCol{
+  background-color: #B6C4A2;
+}
+
+#tuesdayCol, #thursdayCol, #saturdayCol{
+  background-color: #DCE2BD;
+}
+
+@media (max-width:950px) {
+  .weekdays{
+    flex-direction: column;
+    
+  }
+  .main-content{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  .col{
+    height: 1070px;
+    
+  }
+  
+}
+
+.thick-line {
+  border: none;
+  height: 4px; 
+  background-color: #04aa6d; 
+  width: 100%; 
+}
+
+.overlay-text{
+  font-weight: bold;
+  font-size: 16px; 
+  margin: 0;
+}
+
+@media (max-width:530px) {
+  .main-content{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+
+  }
+  .workout-content{
+    width: 1020px;
+  }
+ 
 }
