@@ -20,6 +20,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="Motion/png" sizes="32x32" href="{% static 'assets/Motion.png' %}">
     <!-- Custom CSS -->
     <link
       rel="stylesheet"
@@ -27,15 +28,7 @@
       href="{% static 'css/layout.css' %}"
     />
     {% block loadInHead %} {% endblock %}
-  <!-- </head>
-  <body>
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-      <div class="container-fluid d-flex justify-content-center">
-        <a class="navbar-brand" href="{% url 'landingPage' %}"
-          >Motion Matrix</a
-        >
-      </div>
-    </nav> -->
+      
     {% block content %} {% endblock %}
   </body>
 </html>
