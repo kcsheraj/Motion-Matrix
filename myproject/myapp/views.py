@@ -46,7 +46,7 @@ def signUpPage(request):
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
-            return redirect('dashboardPage')
+            return redirect('loginPage')
         else:
             messages.error(request, 'An error occurred during registration')
    
