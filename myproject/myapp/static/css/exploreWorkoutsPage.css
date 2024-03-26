@@ -115,6 +115,8 @@ body{
   text-align: center;
   min-width: auto;
   margin: 0 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 
 }
 
@@ -138,4 +140,32 @@ body{
   #muscle-group-display-container ul {
     font-size: smaller;
   }
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#refreshPageButton {
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+#refreshPageButton {
+  background-color: blue; /* Darker green on hover */
+}
+
+#refreshPageButton:hover {
+  background-color: rgb(1, 1, 180); /* Darker green on hover */
 }
