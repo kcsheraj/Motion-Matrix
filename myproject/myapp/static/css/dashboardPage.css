@@ -9,6 +9,7 @@ h1 {
   color: whitesmoke;
   text-align: center;
   font-family: Arial, sans-serif;
+  padding: 18px;
 }
 .card {
   width: 300px;
@@ -38,7 +39,8 @@ h1 {
   text-decoration: none;
   background-color: #edecec;
   padding: 5px;
-  color: #74776b;
+  /*color: #74776b; */
+  color: #565952;
   border-radius: 10px;
   box-shadow: 8px 8px 8px 0 #a4a29e;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -46,7 +48,8 @@ h1 {
 
 .card-title:hover {
   transform: scale(1.1);
-  background-color: #74776b;
+  /*background-color: rgb(170, 162, 232); */
+  background-color: white;
   color: #edecec;
 }
 
