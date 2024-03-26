@@ -51,10 +51,27 @@ def signUpPage(request):
             messages.error(request, 'An error occurred during registration')
    
     return render(request, 'signUpPage.html', {'form': form})
-
+'''
 def dashboardPage(request):
     # Add your view logic here
-    return render(request, 'dashboardPage.html')
+    return render(request, 'dashboardPage.html') '''
+
+def dashboardPage(request):
+    # Check if the user is authenticated
+    if request.user.is_authenticated:
+        # If authenticated, retrieve the first name
+        first_name = request.user.first_name
+        # Use the first name if available, otherwise fallback to "user"
+        name_to_display = first_name if first_name else "admin"
+    else:
+        # If not authenticated, fallback to "user"
+        name_to_display = "user"
+
+    # Pass the name_to_display to the template context
+    context = {'display_name': name_to_display}
+    
+    # Render the dashboard page with the name_to_display in the context
+    return render(request, 'dashboardPage.html', context)
     
 def calendarPage(request):
     # Add your view logic here
