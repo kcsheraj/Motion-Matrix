@@ -111,5 +111,5 @@ async function fetchAndDisplayBaseImage() {
     secondaryMusclesContainer.innerHTML = `<h3 style="color: #FFFFFF;">Secondary Muscle Groups:</h3><p style="color: #FFFFFF;">${selectedSecMuscleGroups.join(', ').replace(/_/g, ' ')}</p><h4 style="color: #FFFFFF;">Workouts:</h4><ul class="no-bullets" style="color: #FFFFFF;">${secondaryWorkouts.map(workout => `<li>${workout}</li>`).join('')}</ul>`;
 }
 document.addEventListener('DOMContentLoaded', function() {
-fetchAndDisplayBaseImage();
+    fetchAndDisplayBaseImage();
 });
