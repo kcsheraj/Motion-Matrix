@@ -1,9 +1,22 @@
 /* Base styles for mobile: Ensure img fits well */
+
+body{
+  min-height: 100vh;
+  background: rgb(254,254,255);
+  background: linear-gradient(0deg, rgba(254,254,255,1) 85%, rgba(167,167,167,1) 87%, rgba(34,37,41,1) 90%);
+  background: #aab8ab;
+  background: rgb(144,131,244);
+  background: linear-gradient(0deg, rgba(144,131,244,1) 5%, rgba(42,100,229,1) 45%, rgba(34,37,41,1) 85%);
+}
+
 #image-container img {
+  border-radius: 20px;
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto; /* Center the image */
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 20px;
 }
 
 /* Ensuring .muscle-group-display-container is centered on mobile */

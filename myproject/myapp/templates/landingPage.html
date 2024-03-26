@@ -40,34 +40,40 @@
 <main class="measure center tc sans-serif black-80 absolute absolute--fill">
   <div class="flex flex-column justify-center items-center h-100">
     <header>
-      <h1 class="animated fadeInUp ease-out-circ d2 a-1 f2 fw3">
-        <code class="db black-40" style="color: black">'Motion Matrix'</code>
+      <h1 class="animated fadeInUp ease-out-circ d2 a-1 f2 fw3" style="font-size: 53px;">
+        <code class="db black-40" style="color: black; font-weight: bold;">'Motion Matrix'</code>
       </h1>
-      <h2 class="animated fadeInUp ease-out-circ d-1 a-2">
-        Unlock your potential, one workout at a time,
-        <span class="nowrap">with our fitness app.</span>
+      <h2 class="animated fadeInUp ease-out-circ d-1 a-2" style="font-size: 25px;">
+        Unlock your potential, one workout
+        <span class="nowrap">at a time, with our fitness app.</span>
       </h2>
       <div class="animated bounceIn ease-in-quad d-2 mt4">
         <a
           href="{% url 'loginPage' %}"
           class="dib link bw1 b--solid b--dark-blue dark-blue fw9 pa3 br3 hover-white hover-bg-dark-blue"
           style="color: black"
+          onmouseover="this.style.color='white';"
+          onmouseout="this.style.color='black';"
         >
-          LogIn
+          Login
         </a>
         <a
           href="{% url 'signUpPage' %}"
           class="dib link bw1 b--solid b--dark-blue dark-blue fw9 pa3 br3 hover-white hover-bg-dark-blue"
           style="color: black"
+          onmouseover="this.style.color='white';"
+          onmouseout="this.style.color='black';"
         >
-          SignUp
+          Sign Up
         </a>
       </div>
+      <div style="padding: 65px;"> </div>
     </header>
     <footer
-      class="animated zoomInDown ease-out-quad d-2 a-1 absolute left-0 bottom-2 w-100"
+      class="animated zoomInDown ease-out-quad d-2 a-1 absolute left-0" style="bottom: 90px; width: 100%; text-align: center;"
     >
-      <a  class="link fw9 dark-blue">
+      <a href="{% url 'dashboardPage' %}" class="link fw9 dark-blue" style="color: rgba(0, 24, 53, 1);">
+        <!--Embark on your fitness journey with us.-->
         Embark on your fitness journey with our app.
       </a>
     </footer>
