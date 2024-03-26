@@ -89,10 +89,14 @@
       />
       <label for="floatingPasswordConfirm">Confirm password</label>
     </div>
-  
-    <input type="submit" class="btn btn-primary w-85 py-2 mb-2 custom-btn" value="Sign Up">
+
+    <input
+      type="submit"
+      class="btn btn-primary w-85 py-2 mb-2 custom-btn"
+      value="Sign Up"
+    />
   </form>
-  
+
   <p>Already have an account? <a href="{% url 'loginPage' %}">Login</a></p>
   <div id="or">OR</div>
   <a
@@ -104,11 +108,18 @@
   >
 </div>
 
-{% if messages %}
-  {% for message in messages %}
-    <p style="color: red; font-size: 15px; margin-top: 20px; text-decoration: underline;">{{ message }}</p>
-  {% endfor %}
-{% endif %}
+{% if messages %} {% for message in messages %}
+<p
+  style="
+    color: red;
+    font-size: 15px;
+    margin-top: 20px;
+    text-decoration: underline;
+  "
+>
+  {{ message }}
+</p>
+{% endfor %} {% endif %}
 
 <!--Added for Vanta background-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
@@ -121,6 +132,7 @@
     gyroControls: false,
     minHeight: 200.0,
     minWidth: 200.0,
+    skyColor: 0x2a64e5,
   });
 </script>
 <!--Added for Bootstrap-->
