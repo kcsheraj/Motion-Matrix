@@ -1,3 +1,4 @@
+
 const workoutsByMuscleGroup = {
     abductors: ["Side Leg Raises", "Cable Hip Abduction"],
     abs: ["Crunches", "Plank", "Russian Twists", "Hanging Leg Raises", "Mountain Climbers"],
@@ -104,19 +105,11 @@ async function fetchAndDisplayBaseImage() {
     const primaryWorkouts = getRandomWorkoutsForMuscleGroups(selectedPrimaryMuscleGroups);
     const secondaryWorkouts = getRandomWorkoutsForMuscleGroups(selectedSecMuscleGroups);
 
-    const primaryMusclesContainer = document.createElement('div');
-    primaryMusclesContainer.innerHTML = `<h3 style="color: #5C574F;">Selected Primary Muscle Groups:</h3><p style="color: #5C574F;">${selectedPrimaryMuscleGroups.join(', ').replace(/_/g, ' ')}</p><h4 style="color: #5C574F;">Workouts:</h4><ul style="color: #5C574F;">${primaryWorkouts.map(workout => `<li style="color: #5C574F;">${workout}</li>`).join('')}</ul>`;
-
-    const secondaryMusclesContainer = document.createElement('div');
-    secondaryMusclesContainer.innerHTML = `<h3 style="color: #5C574F;">Selected Secondary Muscle Groups:</h3><p style="color: #5C574F;">${selectedSecMuscleGroups.join(', ').replace(/_/g, ' ')}</p><h4 style="color: #5C574F;">Workouts:</h4><ul style="color: #5C574F;">${secondaryWorkouts.map(workout => `<li style="color: #5C574F;">${workout}</li>`).join('')}</ul>`;
-
-    const displayContainer = document.getElementById('muscle-group-display-container');
-    if (displayContainer) {
-        displayContainer.appendChild(primaryMusclesContainer);
-        displayContainer.appendChild(secondaryMusclesContainer);
-    } else {
-        console.log('Display container not found');
-    }
-
+    const primaryMusclesContainer = document.getElementById('primaryMusclesContainer');
+    primaryMusclesContainer.innerHTML = `<h3 style="color: #FFFFFF;">Primary Muscle Groups:</h3><p style="color: #FFFFFF;">${selectedPrimaryMuscleGroups.join(', ').replace(/_/g, ' ')}</p><h4 style="color: #FFFFFF;">Workouts:</h4><ul class="no-bullets" style="color: #FFFFFF;">${primaryWorkouts.map(workout => `<li>${workout}</li>`).join('')}</ul>`;
+    const secondaryMusclesContainer = document.getElementById('secondaryMusclesContainer');
+    secondaryMusclesContainer.innerHTML = `<h3 style="color: #FFFFFF;">Secondary Muscle Groups:</h3><p style="color: #FFFFFF;">${selectedSecMuscleGroups.join(', ').replace(/_/g, ' ')}</p><h4 style="color: #FFFFFF;">Workouts:</h4><ul class="no-bullets" style="color: #FFFFFF;">${secondaryWorkouts.map(workout => `<li>${workout}</li>`).join('')}</ul>`;
 }
+document.addEventListener('DOMContentLoaded', function() {
 fetchAndDisplayBaseImage();
+});
