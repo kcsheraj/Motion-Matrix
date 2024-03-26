@@ -1,4 +1,11 @@
 /* Base styles for mobile: Ensure img fits well */
+
+body{
+  min-height: 100vh;
+  background: rgb(254,254,255);
+  background: linear-gradient(0deg, rgba(254,254,255,1) 85%, rgba(167,167,167,1) 87%, rgba(34,37,41,1) 90%);
+}
+
 #image-container img {
   display: block;
   max-width: 100%;

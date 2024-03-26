@@ -106,14 +106,14 @@ input[type="text"] {
 }
 
 .workoutAdding {
-  background-color: #D4CDAB;
+  background-color: rgb(144,131,244);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .addbtn .addWorkout {
-  background-color: #04aa6d;
+  background-color:rgb(144,131,244);
   border: none;
   color: white;
   text-align: center;
@@ -142,9 +142,10 @@ input[type="text"] {
   justify-content: space-evenly;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eaeaea;
-  background-color: #8E9B90;
+  border-bottom: 1px solid rgb(144,131,244);
+  background-color: #415E8C;
   flex-wrap: wrap;
+  
   
 }
 .day {
@@ -174,10 +175,11 @@ input[type="text"] {
   border-left: 2px solid black;
   border-top:2px solid black;
   border-bottom: 2px solid black;
+  color: white;
 }
 
 .day .addWorkout {
-  background-color: #04aa6d; /* Green */
+  background-color: rgb(144,131,244); 
   border: none;
   color: white;
   padding: 16px 32px;
@@ -193,20 +195,21 @@ input[type="text"] {
 .day .addWorkout {
   background-color: white;
   color: black;
-  border: 2px solid #04aa6d;
+  border: 2px solid blue;
+  border-radius: 20px;
 }
 
 .day .addWorkout:hover {
-  background-color: #04aa6d;
+  background-color: rgb(144,131,244);
   color: white;
 }
 
 #mondayCol, #wednesdayCol , #fridayCol, #sundayCol{
-  background-color: #B6C4A2;
+  background-color:rgba(42,100,229,1);
 }
 
 #tuesdayCol, #thursdayCol, #saturdayCol{
-  background-color: #DCE2BD;
+  background-color:#4478d3;
 }
 
 @media (max-width:950px) {
@@ -228,7 +231,7 @@ input[type="text"] {
 .thick-line {
   border: none;
   height: 4px; 
-  background-color: #04aa6d; 
+  background-color: #020218; 
   width: 100%; 
 }
 
@@ -248,4 +251,7 @@ input[type="text"] {
     width: 1020px;
   }
  
+}
+p{
+  color: white;
 }
