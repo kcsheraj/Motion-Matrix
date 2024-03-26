@@ -11,7 +11,9 @@ body {
   padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(#89D0D6, #D1F5F3);
+  background: #aab8ab;
+  background: rgb(144,131,244);
+  background: linear-gradient(0deg, rgba(144,131,244,1) 5%, rgba(42,100,229,1) 45%, rgba(34,37,41,1) 85%);
 }
 .wrapper {
   width: 450px;
@@ -95,7 +97,8 @@ header .current-date {
   transform: translate(-50%, -50%);
 }
 .days li.active::before {
-  background: #D1F5F3;
+  background: #aab8ab;
+  background: rgb(172, 174, 252);
 }
 .days li:not(.active):hover::before {
   background: #f2f2f2;
@@ -103,4 +106,5 @@ header .current-date {
 
 .days li.green::before {
   background: green; /* Background color when clicked */
+  background:rgb(93, 102, 228);
 }

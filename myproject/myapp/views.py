@@ -149,4 +149,5 @@ def exploreWorkoutsPage(request):
 def date_today(request):
     #fetches current date for the navbar
     current_date = date.today()
+    print("Current Date:", current_date) 
     return render(request, 'layout2.html', {'current_date': current_date})
