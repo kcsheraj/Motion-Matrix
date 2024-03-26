@@ -1,3 +1,8 @@
+body{
+  min-height: 100vh;
+  background: rgb(144,131,244);
+  background: linear-gradient(0deg, rgba(144,131,244,1) 5%, rgba(42,100,229,1) 45%, rgba(34,37,41,1) 85%);
+}
 /* Center the columns horizontally */
 .main-container {
   display: flex;
@@ -81,3 +86,13 @@ button[type="submit"]:hover {
     margin: 10px 20px; /* Adjusted margin for smaller screens */
   }
 }
+
+button[type="submit"] {
+  background-color: blue;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(1, 1, 180); /* Change to the desired color */
+  /* Add any other styles you want for the hover effect */
+}
+
