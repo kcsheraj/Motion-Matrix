@@ -29,7 +29,7 @@
   <h1>Welcome back.</h1>
   <form action="" method="POST">
     {% csrf_token %}
-  <div class="form-floating w-85 mb-2">
+  <div class="form-floating w-85 mx-auto mb-2 custom-btn">
     <input
       type="text"
       name = "username"
@@ -39,7 +39,7 @@
     />
     <label for="floatingInput">UserName</label>
   </div>
-  <div class="form-floating w-85 mb-3">
+  <div class="form-floating w-85 mx-auto mb-3 custom-btn">
     <input
       type="password"
       name = "password"
@@ -50,7 +50,7 @@
     <label for="floatingPassword">Password</label>
   </div>
  
-  <input type="submit" class="btn btn-primary w-85 py-2 mb-2" value="Login">
+  <input type="submit" class="btn btn-primary w-85 py-2 mb-2 custom-btn" value="Login">
 </form>
   <p>First time? <a href="{% url 'signUpPage' %}">Sign Up</a></p>
   <div id="or">OR</div>
