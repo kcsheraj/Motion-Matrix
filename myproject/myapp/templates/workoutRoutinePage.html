@@ -15,54 +15,6 @@
 {% block layout2_content %}
 
 <div class="main-container">
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="workout">
-        <h5>Name of the workout</h5>
-        <input
-          type="text"
-          id="workout"
-          name="workout"
-          placeholder="ex: Squat, Bench Press"
-        />
-      </div>
-      <div class="set">
-        <h5>Number of sets</h5>
-        <input
-          type="text"
-          class="number-input"
-          id="numInput1"
-          onkeypress="return onlyNumberKey(event)"
-          placeholder="enter a number, ex: 3"
-        />
-        <script>
-          function onlyNumberKey(evt) {
-            var ASCIICode = evt.which ? evt.which : evt.keyCode;
-            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-              return false;
-            return true;
-          }
-        </script>
-      </div>
-
-      <div class="reps">
-        <h5>Number of reps</h5>
-        <input
-          type="text"
-          class="number-input"
-          id="numInput2"
-          onkeypress="return onlyNumberKey(event)"
-          placeholder="enter a number, ex: 8"
-        />
-      </div>
-
-      <div class="addbtn">
-        <button type="submit" class="addWorkout">Add</button>
-      </div>
-    </div>
-  </div>
   <div class="main-content">
     <div class="weekdays">
       <div id="monday" class="day">
@@ -70,11 +22,41 @@
         <button type="submit" class="addWorkout" id="mondayBtn">
           Add Workout
         </button>
+        <input
+          type="text"
+          id="mondayInput"
+          name="mondayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="mondayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
+        </button>
       </div>
       <div id="tuesday" class="day">
         <p>Tuesday</p>
         <button type="submit" class="addWorkout" id="tuesdayBtn">
           Add Workout
+        </button>
+        <input
+          type="text"
+          id="tuesdayInput"
+          name="tuesdayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="tuesdayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
         </button>
       </div>
       <div id="wednesday" class="day">
@@ -82,11 +64,41 @@
         <button type="submit" class="addWorkout" id="wednesdayBtn">
           Add Workout
         </button>
+        <input
+          type="text"
+          id="wednesdayInput"
+          name="wednesdayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="wednesdayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
+        </button>
       </div>
       <div id="thursday" class="day">
         <p>Thursday</p>
         <button type="submit" class="addWorkout" id="thursdayBtn">
           Add Workout
+        </button>
+        <input
+          type="text"
+          id="thursdayInput"
+          name="thursdayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="thursdayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
         </button>
       </div>
       <div id="friday" class="day">
@@ -94,11 +106,41 @@
         <button type="submit" class="addWorkout" id="fridayBtn">
           Add Workout
         </button>
+        <input
+          type="text"
+          id="fridayInput"
+          name="fridayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="fridayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
+        </button>
       </div>
       <div id="saturday" class="day">
         <p>Saturday</p>
         <button type="submit" class="addWorkout" id="saturdayBtn">
           Add Workout
+        </button>
+        <input
+          type="text"
+          id="saturdayInput"
+          name="saturdayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="saturdayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
         </button>
       </div>
       <div id="sunday" class="day">
@@ -106,39 +148,147 @@
         <button type="submit" class="addWorkout" id="sundayBtn">
           Add Workout
         </button>
+        <input
+          type="text"
+          id="sundayInput"
+          name="sundayInput"
+          class="workoutInput"
+          style="display: none"
+        />
+        <button
+          type="submit"
+          class="addWorkoutConfirm"
+          id="sundayConfirmBtn"
+          style="display: none"
+        >
+          Confirm
+        </button>
       </div>
     </div>
     <div class="workout-content">
       <div id="mondayCol" class="col">
         <p class="overlay-text">MON</p>
-        <hr class="thick-line">
-    </div>
-    <div id="tuesdayCol" class="col">
+        <hr class="thick-line" />
+        <ul id="mondayList"></ul>
+      </div>
+      <div id="tuesdayCol" class="col">
         <p class="overlay-text">TUE</p>
-        <hr class="thick-line">
-    </div>
-    <div id="wednesdayCol" class="col">
+        <hr class="thick-line" />
+        <ul id="tuesdayList"></ul>
+      </div>
+      <div id="wednesdayCol" class="col">
         <p class="overlay-text">WED</p>
-        <hr class="thick-line">
-    </div>
-    <div id="thursdayCol" class="col">
+        <hr class="thick-line" />
+        <ul id="wednesdayList"></ul>
+      </div>
+      <div id="thursdayCol" class="col">
         <p class="overlay-text">THU</p>
-        <hr class="thick-line">
-    </div>
-    <div id="fridayCol" class="col">
+        <hr class="thick-line" />
+        <ul id="thursdayList"></ul>
+      </div>
+      <div id="fridayCol" class="col">
         <p class="overlay-text">FRI</p>
-        <hr class="thick-line">
-    </div>
-    <div id="saturdayCol" class="col">
+        <hr class="thick-line" />
+        <ul id="fridayList"></ul>
+      </div>
+      <div id="saturdayCol" class="col">
         <p class="overlay-text">SAT</p>
-        <hr class="thick-line">
-    </div>
-    <div id="sundayCol" class="col">
+        <hr class="thick-line" />
+        <ul id="saturdayList"></ul>
+      </div>
+      <div id="sundayCol" class="col">
         <p class="overlay-text">SUN</p>
-        <hr class="thick-line">
-    </div>
-      <hr>    
+        <hr class="thick-line" />
+        <ul id="sundayList"></ul>
+      </div>
+      <hr />
     </div>
   </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  // Add event listeners to your buttons
+  document.querySelectorAll(".addWorkout").forEach((button) => {
+    button.addEventListener("click", function () {
+      const day = this.parentNode.id;
+      document.getElementById(day + "Input").style.display = "block";
+      document.getElementById(day + "ConfirmBtn").style.display = "block";
+    });
+  });
+
+  document.querySelectorAll(".addWorkoutConfirm").forEach((confirmButton) => {
+    confirmButton.addEventListener("click", function () {
+      const day = this.parentNode.id;
+      const workoutText = document.getElementById(day + "Input").value;
+      if (workoutText.trim() !== "") {
+        addWorkout(day, workoutText);
+        document.getElementById(day + "Input").style.display = "none";
+        document.getElementById(day + "ConfirmBtn").style.display = "none";
+        document.getElementById(day + "Input").value = "";
+
+        // Send AJAX request to save workout in the database
+        $.ajax({
+          type: "POST",
+          url: "/save_workout/", // Change the URL to your Django view
+          data: {
+            day: day,
+            workoutText: workoutText,
+            csrfmiddlewaretoken: "{{ csrf_token }}",
+          },
+          success: function (response) {
+            console.log("Workout saved successfully");
+          },
+          error: function (xhr, errmsg, err) {
+            console.log(xhr.status + ": " + xhr.responseText);
+          },
+        });
+      } else {
+        alert("Please enter a workout");
+      }
+    });
+  });
+
+  function addWorkout(day, workoutText) {
+    // Here, you can send the AJAX request to add the workout to the database
+    // For now, we'll just add it to the UI
+    const newItem = document.createElement("li");
+    newItem.textContent = workoutText;
+
+    // Append the new workout to the existing list
+    const workoutList = document.getElementById(day + "List");
+    workoutList.appendChild(newItem);
+  }
+</script>
+
+<script>
+  // Check if workout routine data is available
+  const workoutRoutine = JSON.parse("{{ workout_routine|escapejs }}");
+  console.log("Workout Routine Data:", workoutRoutine);
+
+  // Process workout routine data if available
+  if (workoutRoutine) {
+    // Iterate over the data and update UI
+    Object.keys(workoutRoutine).forEach((day) => {
+      const workoutList = document.getElementById(day + "List");
+      if (workoutList) {
+        const workoutText = workoutRoutine[day];
+        console.log("Day:", day, "Workout Text:", workoutText);
+        if (workoutText.trim() !== "") {
+          const newItem = document.createElement("li");
+          newItem.textContent = workoutText.trim();
+          workoutList.appendChild(newItem);
+        } else {
+          console.log("Workout text is empty for", day);
+        }
+      } else {
+        console.log("Workout list element not found for", day);
+      }
+    });
+  } else {
+    console.log("No workout routine data available.");
+  }
+</script>
+
 {% endblock %}

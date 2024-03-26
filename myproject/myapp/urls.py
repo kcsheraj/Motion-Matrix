@@ -17,4 +17,6 @@ urlpatterns = [
     path('add_bench_pr/', views.add_bench_pr, name='add_bench_pr'),
     path('add_squat_pr/', views.add_squat_pr, name='add_squat_pr'),
     path('add_deadlift_pr/', views.add_deadlift_pr, name='add_deadlift_pr'),
+
+    path('save_workout/', views.save_workout, name='save_workout'),
 ]
