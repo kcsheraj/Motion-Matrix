@@ -29,7 +29,7 @@
   <h2>Let's get you set up.</h2>
   <form action="" method="POST">
     {% csrf_token %}
-    <div class="form-floating w-85 mb-2">
+    <div class="form-floating w-85 mb-2 custom-btn">
       <input
         type="text"
         name="first_name"
@@ -39,7 +39,7 @@
       />
       <label for="firstName">First name</label>
     </div>
-    <div class="form-floating w-85 mb-2">
+    <div class="form-floating w-85 mb-2 custom-btn">
       <input
         type="text"
         name="last_name"
@@ -49,7 +49,7 @@
       />
       <label for="lastName">Last name</label>
     </div>
-    <div class="form-floating w-85 mb-2">
+    <div class="form-floating w-85 mb-2 custom-btn">
       <input
         type="text"
         name="username"
@@ -59,7 +59,7 @@
       />
       <label for="username">UserName</label>
     </div>
-    <div class="form-floating w-85 mb-2">
+    <div class="form-floating w-85 mb-2 custom-btn">
       <input
         type="email"
         name="email"
@@ -69,7 +69,7 @@
       />
       <label for="emailAddress">Email address</label>
     </div>
-    <div class="form-floating w-85 mb-2">
+    <div class="form-floating w-85 mb-2 custom-btn">
       <input
         type="password"
         name="password1"
@@ -79,7 +79,7 @@
       />
       <label for="Password">Password</label>
     </div>
-    <div class="form-floating w-85 mb-3">
+    <div class="form-floating w-85 mb-3 custom-btn">
       <input
         type="password"
         name="password2"
@@ -90,7 +90,7 @@
       <label for="floatingPasswordConfirm">Confirm password</label>
     </div>
   
-    <input type="submit" class="btn btn-primary w-85 py-2 mb-2" value="Sign Up">
+    <input type="submit" class="btn btn-primary w-85 py-2 mb-2 custom-btn" value="Sign Up">
   </form>
   
   <p>Already have an account? <a href="{% url 'loginPage' %}">Login</a></p>
