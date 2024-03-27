@@ -1,12 +1,22 @@
 /* Base styles for mobile: Ensure img fits well */
 
-body{
+body {
   min-height: 100vh;
-  background: rgb(254,254,255);
-  background: linear-gradient(0deg, rgba(254,254,255,1) 85%, rgba(167,167,167,1) 87%, rgba(34,37,41,1) 90%);
+  background: rgb(254, 254, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(254, 254, 255, 1) 85%,
+    rgba(167, 167, 167, 1) 87%,
+    rgba(34, 37, 41, 1) 90%
+  );
   background: #aab8ab;
-  background: rgb(144,131,244);
-  background: linear-gradient(0deg, rgba(144,131,244,1) 5%, rgba(42,100,229,1) 45%, rgba(34,37,41,1) 85%);
+  background: rgb(144, 131, 244);
+  background: linear-gradient(
+    0deg,
+    rgba(144, 131, 244, 1) 5%,
+    rgba(42, 100, 229, 1) 45%,
+    rgba(34, 37, 41, 1) 85%
+  );
 }
 
 #image-container img {
@@ -41,8 +51,8 @@ body{
 /* Desktop styles: Adjust to 60% width for larger screens, center the box */
 @media (min-width: 768px) {
   #image-container img {
-    max-width: 60%;
-    min-width: 60%;
+    max-width: 50%;
+    min-width: 50%;
   }
 
   .containers-wrapper {
@@ -69,7 +79,7 @@ body{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     color: rgb(220, 218, 218);
     height: 270px;
@@ -84,7 +94,7 @@ body{
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   color: rgb(220, 218, 218);
   margin-top: 30px;
@@ -117,7 +127,6 @@ body{
   margin: 0 20px;
   margin-bottom: 20px;
   margin-top: 20px;
-
 }
 
 #secondaryMusclesContainer {
@@ -148,7 +157,7 @@ body{
 }
 
 #refreshPageButton {
-  background-color: #4CAF50; /* Green background */
+  background-color: #4caf50; /* Green background */
   border: none;
   color: white;
   padding: 10px 20px;
