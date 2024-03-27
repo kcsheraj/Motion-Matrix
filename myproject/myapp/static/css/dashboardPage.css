@@ -13,7 +13,6 @@ h1 {
   font-size: 50px;
   color: whitesmoke;
   text-align: center;
-  font-family: Arial, sans-serif;
   padding: 18px;
 }
 .card {
@@ -40,7 +39,7 @@ h1 {
 }
 
 .card-title {
-  font-size: 30px;
+  font-size: 28px;
   text-decoration: none;
   background-color: #edecec;
   padding: 5px;
@@ -50,6 +49,7 @@ h1 {
   box-shadow: 8px 8px 8px 0 #a4a29e;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
 .card-title:hover {
