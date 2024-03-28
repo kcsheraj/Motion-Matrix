@@ -1,5 +1,7 @@
 # Motion-Matrix
 Fitness Tracking Web App
+
+Quick preview...deploying soon!
 ![Kapture 2024-03-28 at 17 37 47](https://github.com/kcsheraj/Motion-Matrix/assets/88295555/0d6b4653-50aa-471b-be6e-1b25cb5ef6c2)
 Authors: Sheraj KC, Chris Alex, Lyly Tran, Abhisek Bhujel, Khoi Le
 
